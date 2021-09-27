@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+    <title>Statistics of Emotions Recorded</title>
+
+  </head>
+  <body>
+
+  <a href="/">
+    <img src = "/static/CSS/images/video_head.png" width="100%">
+  </a>
+
+  <br>
+  <br>
+
+  {% block body %}
+
+ <div class="row">
+  <h2><i>Perceived emotions</i></h2>
+   <br>
+   <br>
+  <div class="row">
+    <h3>Facial Emotions</h3>
+      <br>
+        <p>Your most frequent emotion was : </p>
+        <br>
+        <h4> {{emo}}</h4>
+        <div class="parent">
+          <ul align="center">
+            <li>Anger : {{prob[0]}}%</li>
+            <li>Disgust : {{prob[1]}}%</li>
+            <li>Fear : {{prob[2]}}%</li>
+            <li>Happiness : {{prob[3]}}%</li>
+            <li>Sadness : {{prob[4]}}%</li>
+            <li>Surprise : {{prob[5]}}%</li>
+            <li>Neutrality : {{prob[6]}}%</li>
+          </ul>
+        </div>
+      <br>
+    <br>
+    </div>
+  </div>
+
+
+
+  <!--<img src='newplot.png'>-->
+
+  <form>
+    <input type="button" value="Back" onclick="history.go(-1)">
+  </form>
+
+
+  {% endblock %}
+
+</body>
+</html>
